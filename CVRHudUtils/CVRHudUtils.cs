@@ -32,7 +32,7 @@ namespace CVRHudUtils
             Instance.UnpatchSelf();
         }
 
-        public static HarmonyLib.Harmony Instance = new HarmonyLib.Harmony("R");
+        public static HarmonyLib.Harmony Instance = new HarmonyLib.Harmony("CVRHudUtils");
     }
     #endregion
 
@@ -68,7 +68,7 @@ namespace CVRHudUtils
                     }
                 }
                 catch { }
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(4f);
             }
         }
         public static string GrabWindowTitle(string processname) //grabs any window name used for spotify song name
