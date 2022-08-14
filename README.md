@@ -1,8 +1,9 @@
 # CVRHudUtils
 This mod does 3 things
 
-# Prefix Patch
+# Prefix Patches
 Prefix patches on the hud popup to SKIP the "Skeletal Input changed" popup when you press the A button on a left index controller
+Also added skips for 'Flight Mode Changed' and 'Prop was blocked by content filter'
 
 # SpotifyUtils
 One is for Spotify Song title grabbing to throw up as as hud message, it gets this information from the window title of spotify, 
