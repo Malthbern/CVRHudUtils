@@ -37,16 +37,22 @@ namespace CVRHudUtils
     #endregion
 
     #region PatchHud
-    [HarmonyPatch(typeof(ABI_RC.Core.UI.CohtmlHud), nameof(ABI_RC.Core.UI.CohtmlHud.Instance.ViewDropTextImmediate))]
-    public static class SkeletalTextBlock
-    { 
-        static bool Prefix(string __0, string __1, string __2) { if (__1 == "Skeletal Input changed ") {  return false; } else { return true; } } //skips skeletal input changed popup with index controllers
-    }
+        [HarmonyPatch(typeof(ABI_RC.Core.UI.CohtmlHud), nameof(ABI_RC.Core.UI.CohtmlHud.Instance.ViewDropTextImmediate))]
+        public static class SkeletalTextBlock
+        { 
+            static bool Prefix(string __0, string __1, string __2) { if (__1 == "Skeletal Input changed ") {  return false; } else { return true; } } //skips skeletal input changed popup with index controllers
+        }
+
+        [HarmonyPatch(typeof(ABI_RC.Core.UI.CohtmlHud), nameof(ABI_RC.Core.UI.CohtmlHud.Instance.ViewDropText), new Type[] { typeof(string), typeof(string) })]
+        public static class RightHudPatch
+        {
+            static bool Prefix(string __0, string __1) { if (__0 == "Switch Flight Mode" || __0 == "Prop was blocked by the content filter System") { return false; } else { return true; } }
+        }
     #endregion
 
     #region SpotifyTitleAlert
-    public static class SpotifyTitleGrabber
-    {
+        public static class SpotifyTitleGrabber
+        {
         public static string CurrentSong;
         public static string WindowTitle;
         public static string LastSong;
