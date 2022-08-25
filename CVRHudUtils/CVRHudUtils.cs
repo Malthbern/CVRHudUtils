@@ -14,7 +14,7 @@ namespace CVRHudUtils
         public const string Description = null; 
         public const string Author = "Swordsith"; 
         public const string Company = null; 
-        public const string Version = "1.0.1";
+        public const string Version = "1.0.0";
         public const string DownloadLink = null; 
     }
 
