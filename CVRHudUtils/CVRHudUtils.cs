@@ -92,6 +92,7 @@ namespace CVRHudUtils
     #region TimeUtils
     public static class TimeUtils
     {
+        string previoustime;
         public static string CurrentTime;
         public static void Start() { MelonCoroutines.Start(TimeAlert()); }
         public static IEnumerator TimeAlert()
@@ -99,6 +100,13 @@ namespace CVRHudUtils
             while (true)
             {
                 CurrentTime = DateTime.Now.ToString("HH:mm");
+
+                switch (CurrentTime > previoustime)
+                {
+                    case false: yield return new WaitForSeconds(50f); break;
+                    case true: previoustime = CurrentTime; break;
+                }
+
                 switch (CurrentTime)
                 {
                     case "04:20": CohtmlHud.Instance.ViewDropTextImmediate($"[TimeUtils]", $"{CurrentTime}", "YEET"); yield return new WaitForSeconds(50f); break;
