@@ -1,0 +1,2 @@
+D:\Unity Projects\CVRHudUtils\CVRHudUtils\obj\Debug\CVRHudUtils.csproj.AssemblyReference.cache
+D:\Unity Projects\CVRHudUtils\CVRHudUtils\obj\Debug\CVRHudUtils.csproj.CoreCompileInputs.cache

@@ -92,7 +92,7 @@ namespace CVRHudUtils
     #region TimeUtils
     public static class TimeUtils
     {
-        string previoustime;
+        static bool TimeAnnouncedLastTick = false;
         public static string CurrentTime;
         public static void Start() { MelonCoroutines.Start(TimeAlert()); }
         public static IEnumerator TimeAlert()
@@ -101,10 +101,9 @@ namespace CVRHudUtils
             {
                 CurrentTime = DateTime.Now.ToString("HH:mm");
 
-                switch (CurrentTime > previoustime)
+                switch (TimeAnnouncedLastTick)
                 {
-                    case false: yield return new WaitForSeconds(50f); break;
-                    case true: previoustime = CurrentTime; break;
+                    case true: TimeAnnouncedLastTick = false; yield return new WaitForSeconds(50f); break;
                 }
 
                 switch (CurrentTime)
