@@ -1,0 +1,17 @@
+
+.vs/CVRHudUtils/v16/.suo
+*.dll
+CVRHudUtils/bin/Debug/CVRHudUtils.pdb
+CVRHudUtils/bin/Debug/MelonLoader.xml
+CVRHudUtils/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+CVRHudUtils/obj/Debug/CVRHudUtils.csproj.AssemblyReference.cache
+.vs/CVRHudUtils/v16/.suo
+CVRHudUtils/obj/Debug/CVRHudUtils.csproj.CopyComplete
+CVRHudUtils/obj/Debug/CVRHudUtils.csproj.AssemblyReference.cache
+CVRHudUtils/obj/Debug/CVRHudUtils.csproj.CoreCompileInputs.cache
+CVRHudUtils/obj/Debug/CVRHudUtils.csproj.FileListAbsolute.txt
+CVRHudUtils/obj/Debug/CVRHudUtils.pdb
+CVRHudUtils/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+CVRHudUtils/obj/Release/CVRHudUtils.csproj.AssemblyReference.cache
+CVRHudUtils/obj/Release/CVRHudUtils.csproj.CoreCompileInputs.cache
+CVRHudUtils/obj/Release/CVRHudUtils.csproj.FileListAbsolute.txt
